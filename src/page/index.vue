@@ -4,7 +4,7 @@
 
     <el-row class="tac">
       <el-col :span="3">
-        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="dark">
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>导航一</template>
             <el-menu-item-group title="分组一">
@@ -20,6 +20,14 @@
         </el-menu>
       </el-col>
       <el-col :span="21">
+        <el-row class="tac">
+          <el-col :span="24" class="floatright"><myheader></myheader></el-col>
+          
+            
+          
+
+        </el-row>
+
         <ul class="list">
           <li v-for="item in lists" v-text="item.title"></li>
         </ul>
@@ -29,6 +37,7 @@
 </template>
 
 <script>
+import myheader from '../components/header.vue'
 
 
 export default {
@@ -52,6 +61,12 @@ export default {
         console.log(key, keyPath);
       }
     },
-  components:{}
+  components:{myheader}
 }
 </script>
+
+<style>
+.floatright{
+  float:"right";
+}
+</style>

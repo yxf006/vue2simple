@@ -3,7 +3,7 @@
   <div>
     
 
-    <myheader></myheader>
+    <!--<myheader></myheader>-->
     <!--<router-link to='/user'>user</router-link>-->
 
     <router-view class="view" keep-alive transition transition-mode="out-in">
