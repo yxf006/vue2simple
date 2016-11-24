@@ -21,3 +21,6 @@ new Vue({
   render:(h)=>h(App)
 })
 
+
+router.replace('/user/login')
+
